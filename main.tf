@@ -17,16 +17,6 @@ provider "aws" {
     region = "us-west-2"
   }
 
-# Create SNS Topic
-
-resource "aws_sns_topic" "notifications" {
-  name = var.sns_topic_name
-
-  tags = {
-    Name = "cloud-notifications"
-  }
-}
-
 # Create S3 bucket for CloudTrail logs
 
 resource "aws_s3_bucket" "cloudtrail" {
